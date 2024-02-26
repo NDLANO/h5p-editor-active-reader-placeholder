@@ -210,6 +210,26 @@
       "machineName": "H5P.TrueFalse",
       "majorVersion": 1,
       "minorVersion": 8
+    },
+    {
+      "machineName": "H5P.ActiveReaderTextInput",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
+      "machineName": "H5P.GuessTheAnswer",
+      "majorVersion": 1,
+      "minorVersion": 5
+    },
+    {
+      "machineName": "H5P.MultiMediaChoice",
+      "majorVersion": 0,
+      "minorVersion": 3
+    },
+    {
+      "machineName": "H5P.KeywordSelector",
+      "majorVersion": 1,
+      "minorVersion": 1
     }
   ]
 }
