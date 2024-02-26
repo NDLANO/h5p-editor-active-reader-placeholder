@@ -1,8 +1,8 @@
-@import "@styles/h5peditor-portfolio-placeholder-main";
+@import "@styles/h5peditor-active-reader-placeholder-main";
 
-.h5peditor-portfolio-placeholder-contents-wrapper {
+.h5peditor-active-reader-placeholder-contents-wrapper {
 
-  .h5peditor-portfolio-placeholder-contents {
+  .h5peditor-active-reader-placeholder-contents {
     box-shadow: 0 0 2px 2px $form-manager-box-shadow inset;
     display: flex;
     flex-direction: row;
@@ -10,7 +10,7 @@
     overflow: hidden;
     padding: .5em;
 
-    .h5peditor-portfolio-placeholder-layout-template {
+    .h5peditor-active-reader-placeholder-layout-template {
       display: flex;
       flex-direction: column;
       gap: 0.5em;
@@ -21,12 +21,12 @@
         cursor: col-resize;
       }
 
-      .h5peditor-portfolio-placeholder-layout-template-row {
+      .h5peditor-active-reader-placeholder-layout-template-row {
         cursor: inherit;
         display: flex;
         flex-direction: row;
 
-        .h5peditor-portfolio-placeholder-layout-template-col {
+        .h5peditor-active-reader-placeholder-layout-template-col {
           background-color: #ffffff;
           border: 1px solid transparent;
           box-sizing: border-box;

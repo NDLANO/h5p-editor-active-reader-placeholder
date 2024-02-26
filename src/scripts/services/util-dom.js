@@ -20,6 +20,9 @@ export const swapDOMElements = (element1, element2) => {
   parent2.replaceChild(element1, replacement2);
 };
 
+/** @constant {number} Double click time */
+const DOUBLE_CLICK_TIME = 300;
+
 /**
  * Double click handler.
  * @param {Event} event Regular click event.
@@ -44,6 +47,3 @@ export const doubleClick = (event, callback) => {
     event.target.count = 0;
   }, DOUBLE_CLICK_TIME);
 };
-
-/** @constant {number} Double click time */
-const DOUBLE_CLICK_TIME = 300;

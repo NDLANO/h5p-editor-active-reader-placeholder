@@ -1,4 +1,4 @@
-@import "@styles/h5peditor-portfolio-placeholder-main";
+@import "@styles/h5peditor-active-reader-placeholder-main";
 
 // stylelint-disable no-descending-specificity
 // Taken from implementation in Editor Course Presentation
@@ -550,7 +550,7 @@
   content: "\f200";
 }
 
-.form-manager-icon-portfolioplaceholder:before,
+.form-manager-icon-activereaderplaceholder:before,
 .form-manager-icon-truefalse:before {
   font-family: "H5PFontIcons", system-ui, -apple-system, sans-serif;
 }
@@ -559,7 +559,7 @@
   content: "\e902";
 }
 
-.form-manager-icon-portfolioplaceholder:before {
+.form-manager-icon-activereaderplaceholder:before {
   content: "\e923";
 }
 

@@ -1,7 +1,7 @@
 import FocusTrap from '@services/focus-trap.js';
 import './passepartout.scss';
 
-export default class PortfolioPlaceholderPassepartout {
+export default class ActiveReaderPlaceholderPassepartout {
 
   /**
    * @class

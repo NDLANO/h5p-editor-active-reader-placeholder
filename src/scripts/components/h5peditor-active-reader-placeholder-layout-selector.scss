@@ -1,0 +1,71 @@
+@import "@styles/h5peditor-active-reader-placeholder-main";
+
+.h5peditor-active-reader-placeholder-layout-selector {
+  background-color: $background-color;
+  box-shadow: 0 0 2px 2px $form-manager-box-shadow;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  margin-top: .5em;
+  min-width: 100%;
+  overflow: hidden;
+
+  button.h5peditor-active-reader-placeholder-layout-selector-preview {
+    background: none;
+    border: 0;
+    font-size: 1em;
+    justify-self: center;
+    height: 3em;
+    margin: .5em;
+    outline: none;
+    padding: 0;
+    width: 4em;
+
+    .h5peditor-active-reader-placeholder-layout-template {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2em;
+      height: 100%;
+      width: 100%;
+
+      .h5peditor-active-reader-placeholder-layout-template-row {
+        display: flex;
+        flex-direction: row;
+        gap: 0.2em;
+
+        .h5peditor-active-reader-placeholder-layout-template-col {
+          background-color: $base-color-10;
+          box-sizing: border-box;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &.h5peditor-active-reader-placeholder-layout-selector-selected
+      .h5peditor-active-reader-placeholder-layout-template
+      .h5peditor-active-reader-placeholder-layout-template-row
+      .h5peditor-active-reader-placeholder-layout-template-col {
+        background: $base-color-50;
+    }
+
+    &:hover .h5peditor-active-reader-placeholder-layout-template
+      .h5peditor-active-reader-placeholder-layout-template-row
+      .h5peditor-active-reader-placeholder-layout-template-col {
+        border: 0.2em solid $base-color-50;
+        background: $base-color-5;
+    }
+
+    &:focus .h5peditor-active-reader-placeholder-layout-template
+      .h5peditor-active-reader-placeholder-layout-template-row
+      .h5peditor-active-reader-placeholder-layout-template-col {
+        border: 0.2em solid $base-color-50;
+        outline: none;
+    }
+
+    &:active .h5peditor-active-reader-placeholder-layout-template
+      .h5peditor-active-reader-placeholder-layout-template-row
+      .h5peditor-active-reader-placeholder-layout-template-col {
+        background: $base-color-50;
+    }
+  }
+}

@@ -1,6 +1,6 @@
-@import "@styles/h5peditor-portfolio-placeholder-main";
+@import "@styles/h5peditor-active-reader-placeholder-main";
 
-.h5peditor-portfolio-placeholder-layout-template-button {
+.h5peditor-active-reader-placeholder-layout-template-button {
   background-color: $background-color;
   border: .25em solid transparent;
   box-sizing: border-box;
@@ -60,11 +60,11 @@
     }
   }
 
-  &.h5peditor-portfolio-placeholder-over {
+  &.h5peditor-active-reader-placeholder-over {
     border: .25em solid $base-color-90;
   }
 
-  &.h5peditor-portfolio-placeholder-selected {
+  &.h5peditor-active-reader-placeholder-selected {
     border: .25em solid $base-color-90;
     box-shadow: 0 0 0.5em 0 $dark-grey-20;
   }
@@ -168,7 +168,7 @@
   }
 }
 
-.h5peditor-portfolio-placeholder-placeholder {
+.h5peditor-active-reader-placeholder-placeholder {
   background-color: $base-color-40;
   border: .2em dashed $base-color-90;
   border-radius: .3em;

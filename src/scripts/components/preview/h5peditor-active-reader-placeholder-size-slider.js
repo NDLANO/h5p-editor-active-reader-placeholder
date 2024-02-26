@@ -1,7 +1,7 @@
 import Util from '@services/util.js';
-import './h5peditor-portfolio-placeholder-size-slider.scss';
+import './h5peditor-active-reader-placeholder-size-slider.scss';
 
-export default class PortfolioPlaceholderSizeSlider {
+export default class ActiveReaderPlaceholderSizeSlider {
 
   /**
    * @class
@@ -23,7 +23,7 @@ export default class PortfolioPlaceholderSizeSlider {
     }, callbacks);
 
     this.dom = document.createElement('div');
-    this.dom.classList.add('h5peditor-portfolio-placeholder-size-slider');
+    this.dom.classList.add('h5peditor-active-reader-placeholder-size-slider');
     this.dom.setAttribute('tabindex', '0');
     this.dom.setAttribute('role', 'separator');
     this.dom.setAttribute('aria-min', this.params.aria.min);

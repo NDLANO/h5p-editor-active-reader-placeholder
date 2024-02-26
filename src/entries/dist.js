@@ -1,5 +1,5 @@
-import '@styles/h5peditor-portfolio-placeholder.scss';
-import PortfolioPlaceholder from '@scripts/h5peditor-portfolio-placeholder';
+import '@styles/h5peditor-active-reader-placeholder.scss';
+import ActiveReaderPlaceholder from '@scripts/h5peditor-active-reader-placeholder';
 
 // Load library
-H5PEditor.widgets.portfolioplaceholder = PortfolioPlaceholder;
+H5PEditor.widgets.activereaderplaceholder = ActiveReaderPlaceholder;

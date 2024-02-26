@@ -1,7 +1,7 @@
 import Util from '@services/util';
 import { swapDOMElements } from '@services/util-dom';
-import LayoutButton from './h5peditor-portfolio-placeholder-layout-button.js';
-import PortfolioPlaceholderSizeSlider from './preview/h5peditor-portfolio-placeholder-size-slider.js';
+import LayoutButton from './h5peditor-active-reader-placeholder-layout-button.js';
+import ActiveReaderPlaceholderSizeSlider from './preview/h5peditor-active-reader-placeholder-size-slider.js';
 
 export default class LayoutTemplate {
 
@@ -31,7 +31,7 @@ export default class LayoutTemplate {
 
     this.container = document.createElement('div');
     this.container.classList
-      .add('h5peditor-portfolio-placeholder-layout-template');
+      .add('h5peditor-active-reader-placeholder-layout-template');
   }
 
   /**
@@ -64,7 +64,7 @@ export default class LayoutTemplate {
 
       this.rows[currentRow] = document.createElement('div');
       this.rows[currentRow].classList.add(
-        'h5peditor-portfolio-placeholder-layout-template-row'
+        'h5peditor-active-reader-placeholder-layout-template-row'
       );
       this.rows[currentRow].style.height = `${ 100 / rows.length }%`;
 
@@ -123,7 +123,7 @@ export default class LayoutTemplate {
           );
 
           // A separator should be put between buttons of a row
-          this.separators[fieldId] = new PortfolioPlaceholderSizeSlider(
+          this.separators[fieldId] = new ActiveReaderPlaceholderSizeSlider(
             {
               dictionary: this.params.dictionary,
               aria: { controls: buttonUUID, min: 1, max: 99 }

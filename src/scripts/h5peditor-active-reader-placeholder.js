@@ -1,14 +1,14 @@
 import Color from 'color';
-import LayoutSelector from '@components/h5peditor-portfolio-placeholder-layout-selector.js';
-import PortfolioPlaceholderPreview from '@components/preview/h5peditor-portfolio-placeholder-preview.js';
+import LayoutSelector from '@components/h5peditor-active-reader-placeholder-layout-selector.js';
+import ActiveReaderPlaceholderPreview from '@components/preview/h5peditor-active-reader-placeholder-preview.js';
 import Dictionary from '@services/dictionary.js';
 import Util from '@services/util.js';
 import {
   findParentLibrary, findInstance, findField
 } from '@services/util-h5p.js';
 
-/** Class for Portfolio Placeholder H5P widget */
-export default class PortfolioPlaceholder {
+/** Class for ActiveReader Placeholder H5P widget */
+export default class ActiveReaderPlaceholder {
 
   /**
    * @class
@@ -76,11 +76,11 @@ export default class PortfolioPlaceholder {
 
       this.overrideExtraTitle(this.parent?.field?.paramOverrides ?? {});
 
-      if (this.parent.field?.portfolioPlaceholder?.colorSelector) {
+      if (this.parent.field?.activeReaderPlaceholder?.colorSelector) {
         this.initTitleBarColor();
       }
 
-      const chapterEditor = findParentLibrary('PortfolioChapter', this);
+      const chapterEditor = findParentLibrary('ActiveReaderChapter', this);
       if (chapterEditor) {
         chapterEditor.handlePlaceholderDone(this.parent?.params?.subContentId);
       }
@@ -88,7 +88,7 @@ export default class PortfolioPlaceholder {
 
     // DOM, H5P may require $container
     this.$container = H5P.jQuery('<div>', {
-      class: 'h5peditor-portfolio-placeholder'
+      class: 'h5peditor-active-reader-placeholder'
     });
 
     // Errors (or add your own)
@@ -106,7 +106,7 @@ export default class PortfolioPlaceholder {
 
     // Listen for delete call
     H5P.externalDispatcher.on(
-      'H5PEditor.PortfolioPlaceholder:deleteHidden', () => {
+      'H5PEditor.ActiveReaderPlaceholder:deleteHidden', () => {
         this.preview.deleteHidden();
         this.preview.updateInstances({ force: true });
       }
@@ -119,7 +119,7 @@ export default class PortfolioPlaceholder {
    * @returns {string} Translation for key.
    */
   t(key) {
-    return H5PEditor.t('H5PEditor.PortfolioPlaceholder', key);
+    return H5PEditor.t('H5PEditor.ActiveReaderPlaceholder', key);
   }
 
   /**
@@ -134,7 +134,7 @@ export default class PortfolioPlaceholder {
     this.children.push(this.fieldInstance);
 
     // Attach color selector widget to custom dom if requested
-    if (this.parent.field?.portfolioPlaceholder?.colorSelector) {
+    if (this.parent.field?.activeReaderPlaceholder?.colorSelector) {
       this.colorSelectorInstance =
         findInstance('colorEditorField', this.fieldInstance);
 
@@ -150,7 +150,7 @@ export default class PortfolioPlaceholder {
     const availableOptions = this.buildAvailableOptions(
       {
         allOptions: fieldsLayout.options,
-        defaults: PortfolioPlaceholder.DEFAULT_LAYOUTS,
+        defaults: ActiveReaderPlaceholder.DEFAULT_LAYOUTS,
         requestedOptions: this.parent?.field?.paramOverrides?.options
       }
     );
@@ -185,7 +185,7 @@ export default class PortfolioPlaceholder {
     );
 
     // Add preview
-    this.preview = new PortfolioPlaceholderPreview(
+    this.preview = new ActiveReaderPlaceholderPreview(
       {
         dictionary: this.dictionary,
         layout: this.params.arrangement,
@@ -201,7 +201,7 @@ export default class PortfolioPlaceholder {
     this.$container.get(0).appendChild(this.preview.getDOM());
 
     // Attach background color selector widget to custom dom if requested
-    if (this.parent.field?.portfolioPlaceholder?.colorSelectorBackground) {
+    if (this.parent.field?.activeReaderPlaceholder?.colorSelectorBackground) {
       this.colorSelectorBackgroundInstance =
         findInstance('colorBackground', this.fieldInstance);
 
@@ -212,7 +212,7 @@ export default class PortfolioPlaceholder {
     }
 
     // Attach height limit text field to custom dom if requested
-    if (this.parent.field?.portfolioPlaceholder?.imageHeightLimit) {
+    if (this.parent.field?.activeReaderPlaceholder?.imageHeightLimit) {
       this.imageHeightLimitInstance =
         findInstance('imageHeightLimit', this.fieldInstance);
 
@@ -293,7 +293,7 @@ export default class PortfolioPlaceholder {
    */
   overrideH5PCoreTitleField() {
     const editorContainer = this.$container.get(0)
-      .closest('.h5p-portfolioplaceholder-editor');
+      .closest('.h5p-activereaderplaceholder-editor');
 
     if (editorContainer) {
       const titleField = editorContainer
@@ -324,7 +324,7 @@ export default class PortfolioPlaceholder {
    */
   overrideExtraTitle(paramOverrides) {
     const editorContainer = this.$container.get(0)
-      .closest('.h5p-portfolioplaceholder-editor');
+      .closest('.h5p-activereaderplaceholder-editor');
 
     if (!editorContainer) {
       return;
@@ -490,6 +490,6 @@ export default class PortfolioPlaceholder {
 }
 
 /** @constant {string[]} DEFAULT_LAYOUTS Default layout values. */
-PortfolioPlaceholder.DEFAULT_LAYOUTS = [
+ActiveReaderPlaceholder.DEFAULT_LAYOUTS = [
   '1', '2', '1-1', '1-2', '2-1', '3', '1-3', '3-1'
 ];

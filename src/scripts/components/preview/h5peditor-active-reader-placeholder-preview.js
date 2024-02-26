@@ -1,10 +1,10 @@
-import './h5peditor-portfolio-placeholder-preview.scss';
-import LayoutTemplate from '@components/h5peditor-portfolio-placeholder-layout-template.js';
+import './h5peditor-active-reader-placeholder-preview.scss';
+import LayoutTemplate from '@components/h5peditor-active-reader-placeholder-layout-template.js';
 import Util from '@services/util.js';
-import FormManager from '@components/h5peditor-portfolio-placeholder-form-manager.js';
-import PortfolioPlaceholderPassepartout from '@components/passepartout/passepartout.js';
+import FormManager from '@components/h5peditor-active-reader-placeholder-form-manager.js';
+import ActiveReaderPlaceholderPassepartout from '@components/passepartout/passepartout.js';
 
-export default class PortfolioPlaceholderPreview {
+export default class ActiveReaderPlaceholderPreview {
 
   /**
    * @class
@@ -40,7 +40,7 @@ export default class PortfolioPlaceholderPreview {
     this.formManager = new FormManager({
       dictionary: this.params.dictionary,
       parent: this.params.listWidget.parent.parent,
-      customIconClass: 'portfolioplaceholder'
+      customIconClass: 'activereaderplaceholder'
     });
 
     this.preview = this.buildDOM();
@@ -96,7 +96,7 @@ export default class PortfolioPlaceholderPreview {
    */
   buildDOM() {
     const preview = document.createElement('div');
-    preview.classList.add('h5peditor-portfolio-placeholder-contents-wrapper');
+    preview.classList.add('h5peditor-active-reader-placeholder-contents-wrapper');
     preview.appendChild(this.buildPreviewDOM());
 
     return preview;
@@ -108,7 +108,7 @@ export default class PortfolioPlaceholderPreview {
    */
   buildPreviewDOM() {
     const contents = document.createElement('div');
-    contents.classList.add('h5peditor-portfolio-placeholder-contents');
+    contents.classList.add('h5peditor-active-reader-placeholder-contents');
 
     this.layoutTemplate = new LayoutTemplate(
       {
@@ -164,7 +164,7 @@ export default class PortfolioPlaceholderPreview {
     }
 
     const editorForm = document.createElement('div');
-    editorForm.classList.add('h5p-editor-portfolio-placeholder-form');
+    editorForm.classList.add('h5p-editor-active-reader-placeholder-form');
 
     // Render element fields to form in DOM
     H5PEditor.processSemanticsChunk(
@@ -364,7 +364,7 @@ export default class PortfolioPlaceholderPreview {
       );
     }
 
-    this.passepartout = new PortfolioPlaceholderPassepartout();
+    this.passepartout = new ActiveReaderPlaceholderPassepartout();
     this.passepartout.fitTo(
       this.formManager.formContainer.parentNode.parentNode
     );
@@ -421,7 +421,7 @@ export default class PortfolioPlaceholderPreview {
 
       const machineName = (field?.content?.library || '').split(' ')[0];
       if (
-        PortfolioPlaceholderPreview.CONTENT_TYPES_WITHOUT_PREVIEW
+        ActiveReaderPlaceholderPreview.CONTENT_TYPES_WITHOUT_PREVIEW
           .includes(machineName)
       ) {
         instanceDOM.classList.add('h5p-editor-placeholder-no-preview-possible');
@@ -517,6 +517,6 @@ export default class PortfolioPlaceholderPreview {
 }
 
 /** @constant {string[]} Content types that cannot render preview */
-PortfolioPlaceholderPreview.CONTENT_TYPES_WITHOUT_PREVIEW = [
+ActiveReaderPlaceholderPreview.CONTENT_TYPES_WITHOUT_PREVIEW = [
   'H5P.Timeline' // Seems to require some extra treatment when attaching
 ];

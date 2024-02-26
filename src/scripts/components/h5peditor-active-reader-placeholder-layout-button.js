@@ -1,6 +1,6 @@
 import Util from '@services/util.js';
 import { doubleClick } from '@services/util-dom.js';
-import './h5peditor-portfolio-placeholder-layout-button.scss';
+import './h5peditor-active-reader-placeholder-layout-button.scss';
 
 export default class LayoutButton {
   /**
@@ -39,13 +39,13 @@ export default class LayoutButton {
 
     if (params.type === 'button') {
       this.button.classList.add(
-        'h5peditor-portfolio-placeholder-layout-template-button'
+        'h5peditor-active-reader-placeholder-layout-template-button'
       );
       this.button.setAttribute('draggable', true);
     }
     else {
       this.button.classList.add(
-        'h5peditor-portfolio-placeholder-layout-template-col'
+        'h5peditor-active-reader-placeholder-layout-template-col'
       );
     }
 
@@ -86,7 +86,7 @@ export default class LayoutButton {
     // Placeholder to show when dragging
     this.dragPlaceholder = document.createElement('div');
     this.dragPlaceholder.classList.add(
-      'h5peditor-portfolio-placeholder-placeholder'
+      'h5peditor-active-reader-placeholder-placeholder'
     );
 
     // These listeners prevent Firefox from showing draggable animation
@@ -346,7 +346,7 @@ export default class LayoutButton {
     }
 
     this.button.classList
-      .toggle(`h5peditor-portfolio-placeholder-${effectName}`, enabled);
+      .toggle(`h5peditor-active-reader-placeholder-${effectName}`, enabled);
   }
 
   /**

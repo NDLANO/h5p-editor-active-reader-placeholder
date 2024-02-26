@@ -1,4 +1,4 @@
-import './h5peditor-portfolio-placeholder-form-manager.scss';
+import './h5peditor-active-reader-placeholder-form-manager.scss';
 import Util from '@services/util.js';
 
 // This was adapted from the FormManager in Editor Course Presentation
