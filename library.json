@@ -230,6 +230,11 @@
       "machineName": "H5P.KeywordSelector",
       "majorVersion": 1,
       "minorVersion": 1
+    },
+    {
+      "machineName": "H5P.Vocabulary Drill",
+      "majorVersion": 1,
+      "minorVersion": 0
     }
   ]
 }
