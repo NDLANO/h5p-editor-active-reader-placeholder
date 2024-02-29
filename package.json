@@ -1,6 +1,6 @@
 {
   "name": "h5peditor-active-reader-placeholder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Editor placeholder widget for H5P ActiveReader",
   "private": true,
   "scripts": {
