@@ -1,9 +1,9 @@
-@import "@styles/h5peditor-active-reader-placeholder-main";
+@use "@styles/h5peditor-active-reader-placeholder-main.scss" as styles;
 
 .h5peditor-active-reader-placeholder-contents-wrapper {
 
   .h5peditor-active-reader-placeholder-contents {
-    box-shadow: 0 0 2px 2px $form-manager-box-shadow inset;
+    box-shadow: 0 0 2px 2px styles.$form-manager-box-shadow inset;
     display: flex;
     flex-direction: row;
     margin-top: .5em;
