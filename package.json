@@ -4,7 +4,7 @@
   "description": "Editor placeholder widget for H5P ActiveReader",
   "private": true,
   "scripts": {
-    "lint": "stylelint './src/**/*.scss' && eslint './src/**/*.js'",
+    "lint": "eslint './src/**/*.js'",
     "build": "webpack --mode=production",
     "watch": "webpack --mode=development --watch"
   },

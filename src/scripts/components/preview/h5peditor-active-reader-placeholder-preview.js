@@ -425,7 +425,8 @@ export default class ActiveReaderPlaceholderPreview {
           .includes(machineName)
       ) {
         instanceDOM.classList.add('h5p-editor-placeholder-no-preview-possible');
-        instanceDOM.innerHTML = `<p>${machineName.split('.')[1]}</p><p>${this.params.dictionary.get('l10n.noPreviewPossible')}</p>`;
+        instanceDOM.innerHTML =
+          `<p>${machineName.split('.')[1]}</p><p>${this.params.dictionary.get('l10n.noPreviewPossible')}</p>`;
       }
       else {
         // Fix required for video fitting, common issue
