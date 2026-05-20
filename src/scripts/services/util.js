@@ -42,7 +42,7 @@ class Util {
       return;
     }
 
-    return layout.split('-').reduce((sum, cols) => sum += Number(cols), 0);
+    return layout.split('-').reduce((sum, cols) => sum + Number(cols), 0);
   }
 }
 
